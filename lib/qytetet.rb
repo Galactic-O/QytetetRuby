@@ -12,7 +12,7 @@ class Qytetet
   def inicializarCartasSorpresa
     mazo<< Sorpresa.new("Sube el bitcoin. Ganas 100 euros.", 100, TipoSorpresa:PAGARCOBRAR)
     mazo<< Sorpresa.new("Tienes tanta hambre que te comes tu billete de 100 euros. Ups.", -100, TipoSorpresa:PAGARCOBRAR)
-    mazo<< Sorpresa.new("Día de la marmota. Vuelve a la salida.", 1, TipoSorpresa.IRACASILLA)
+    mazo<< Sorpresa.new("Día de la marmota. Vuelve a la salida.", 1, TipoSorpresa:IRACASILLA)
     mazo<< Sorpresa.new("Tienes que comprar tomates en el Mercadona. Ve al Parking.", 4, TipoSorpresa:IRACASILLA)
     mazo<< Sorpresa.new("Te han pillado haciendo el dab en público, das 
                         tanto cringe que te meten en la cárcel.", 6, TipoSorpresa:IRACASILLA)
