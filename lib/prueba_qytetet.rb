@@ -4,21 +4,16 @@
 
 #encoding: utf­8
 
-require_relative 'tipo_sorpresa'
-require_relative 'sorpresa'
 require_relative 'qytetet'
 
 module ModeloQytetet
   class PruebaQytetet
-    @juego
-    
-    def juego
-      @juego
-    end
+    @@juego = Qytetet.new
+ 
     
     def PruebaQytetet.getMasQueCero()
       mazotemporal = Array.new
-      mazo.each do |carta|
+      @@juego.mazo.each do |carta|
         if carta.valor > 0
           mazotemporal << carta
         end
@@ -28,8 +23,8 @@ module ModeloQytetet
     
     def PruebaQytetet.getIrACasilla()
       mazotemporal = Array.new
-      mazo.each do |carta|
-        if carta.tipo == TipoSorpresa:IRACASILLA 
+      @@juego.mazo.each do |carta|
+        if carta.tipo == TipoSorpresa::IRACASILLA 
           mazotemporal << carta
         end
       end
@@ -38,7 +33,7 @@ module ModeloQytetet
     
     def PruebaQytetet.getSorpresa(tipo)
       mazotemporal = Array.new
-      mazo.each do |carta|
+      @@juego.mazo.each do |carta|
         if carta.tipo == tipo 
           mazotemporal << carta
         end
@@ -47,9 +42,8 @@ module ModeloQytetet
     end
     
     def PruebaQytetet.main
-      mazo = Array.new
-      qytetet.inicializarCartasSorpresa()
-      puts "Esto es una prueba tope mazo de chula" << "\n"
+      @@juego.inicializarCartasSorpresa()
+      puts "Esto es una prueba tope mazo de chula" << "\n" << "\n"
       
       puts "Carta con un valor mayor que cero: "
       puts getMasQueCero() << "\n"

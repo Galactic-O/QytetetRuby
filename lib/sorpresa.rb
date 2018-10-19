@@ -2,7 +2,13 @@
 # To change this template file, choose Tools | Templates
 # and open the template in the editor.
 
-class Sorpresa
+#encoding: utf­8
+
+require_relative 'tipo_sorpresa'
+
+module ModeloQytetet
+
+  class Sorpresa
   def initialize(sorpresa, valor, tipo)
     @sorpresa = sorpresa
     @tipo = tipo
@@ -22,6 +28,7 @@ class Sorpresa
   end
   
   def to_s
-    "Texto: #{@texto} \n Valor: #{@valor} \n Tipo: #{@tipo}"
+    "CARTA\n  Texto: #{@sorpresa} \n  Valor: #{@valor} \n  Tipo: #{@tipo} \n"
   end
+end
 end
