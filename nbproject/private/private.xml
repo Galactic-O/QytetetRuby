@@ -3,7 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Pablo/Desktop/Universidad/2º%20INGENIERIA%20INFORMATICA/PDOO/QytetetRuby/lib/prueba_qytetet.rb</file>
+            <file>file:/C:/Users/Pablo/Desktop/Universidad/2II/PDOO/QytetetRuby/lib/tablero.rb</file>
+            <file>file:/C:/Users/Pablo/Desktop/Universidad/2II/PDOO/QytetetRuby/lib/casilla.rb</file>
+            <file>file:/C:/Users/Pablo/Desktop/Universidad/2II/PDOO/QytetetRuby/lib/tipo_sorpresa.rb</file>
+            <file>file:/C:/Users/Pablo/Desktop/Universidad/2II/PDOO/QytetetRuby/lib/tipo_casilla.rb</file>
+            <file>file:/C:/Users/Pablo/Desktop/Universidad/2II/PDOO/QytetetRuby/lib/prueba_qytetet.rb</file>
+            <file>file:/C:/Users/Pablo/Desktop/Universidad/2II/PDOO/QytetetRuby/lib/sorpresa.rb</file>
+            <file>file:/C:/Users/Pablo/Desktop/Universidad/2II/PDOO/QytetetRuby/lib/titulo_propiedad.rb</file>
+            <file>file:/C:/Users/Pablo/Desktop/Universidad/2II/PDOO/QytetetRuby/lib/qytetet.rb</file>
         </group>
     </open-files>
 </project-private>
