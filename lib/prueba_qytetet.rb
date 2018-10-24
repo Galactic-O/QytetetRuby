@@ -49,8 +49,8 @@ module ModeloQytetet
     end
     
     def PruebaQytetet.main
-      @@juego.inicializarCartasSorpresa()
-      @@juego.inicializarTablero()
+      @@juego.inicializarCartasSorpresa
+      @@juego.inicializarTablero
       
       puts "Esto es una prueba." << "\n" << "\n"
       
@@ -66,7 +66,7 @@ module ModeloQytetet
       
       #PRUEBAS DE LA PRACTICA 1 SESION 2
       puts "Casillas del tablero: "
-      puts @@juego.tablero.to_s
+      puts @@juego.tablero
     end
     
   end

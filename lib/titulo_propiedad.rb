@@ -14,11 +14,11 @@ module ModeloQytetet
       @nombre = nombre
       
       @precioCompra = precioCompra
-      @alquilerBase = alquilerBase
-      @factorRevalorizacion = factorRevalorizacion
-      @hipotecaBase = hipotecaBase
+      @alquiler_base = alquilerBase
+      @factor_revalorizacion = factorRevalorizacion
+      @hipoteca_base = hipotecaBase
       
-      @precioEdificar = precioEdificar
+      @precio_edificar = precioEdificar
       
       @hipotecada = false
       @numHoteles = 0
@@ -27,9 +27,9 @@ module ModeloQytetet
     
     public
     def to_s
-      "Nombre: #{@nombre}. \n Hipotecada: #{@hipotecada}. \n Alquiler base: #{@alquiler_base}. \n" + 
-      "Factor de revalorizacion: #{@factor_revalorizacion}. \n Hipoteca base: #{@hipoteca_base}. \n" + 
-      "Precio de edificacion: #{@precio_edificar}."
+      " Nombre: #{@nombre}. \n Hipotecada: #{@hipotecada}. \n Alquiler base: #{@alquiler_base}. \n" + 
+      " Factor de revalorizacion: #{@factor_revalorizacion}. \n Hipoteca base: #{@hipoteca_base}. \n" + 
+      " Precio de edificacion: #{@precio_edificar}."
     end
   end
 end

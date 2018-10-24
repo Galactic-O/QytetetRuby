@@ -7,55 +7,58 @@
 require_relative "tipo_casilla"
 require_relative "titulo_propiedad"
 
-module ModuloQytetet
+module ModeloQytetet
   class Casilla
     attr_reader :numero_casilla, :coste, :tipo, :titulo
     attr_writer :titulo
     
     def initialize(tipoCasilla, coste, numeroCasilla, tituloPropiedad)
-      @TipoCasilla = tipoCasilla
+      @tipo = tipoCasilla
       @coste = coste
-      @numeroCasilla = numeroCasilla
-      @TituloPropiedad = tituloPropiedad
+      @numero_casilla = numeroCasilla
+      @titulo = tituloPropiedad
     end
     
-    def self.newCalle(numeroCasilla, titulo)
-      self.new(TipoCasilla::CALLE, titulo.precioCompra, numeroCasilla, titulo)
+    #Por alguna razón la cual desconozco total y completamente, Ruby está atontado
+    #y se piensa que estos constructores, preciosos y bien definidos aquí debajo,
+    #no están definidos, y se ha puesto como objetivo joderme la vida haciendo que
+    #no funciones. Aún así los dejo aquí porque me los he currado.
+    def newCalle(numeroCasilla, titulo)
+      new(TipoCasilla::CALLE, titulo.precioCompra, numeroCasilla, titulo)
     end
     
-    def self.newImpuesto(numeroCasilla, coste)
-      self.new(TipoCasilla::IMPUESTO, coste, numeroCasilla, nil)
+    def newImpuesto(numeroCasilla, coste)
+      new(TipoCasilla::IMPUESTO, coste, numeroCasilla, nil)
     end
     
-    def self.newSorpresa(numeroCasilla)
-      self.new(TipoCasilla::SORPRESA, 0, numeroCasilla, nil)
+    def newSorpresa(numeroCasilla)
+      new(TipoCasilla::SORPRESA, 0, numeroCasilla, nil)
     end
     
-    def self.newSalida(numeroCasilla)
-      self.new(TipoCasilla::SALIDA, 1000, numeroCasilla, nil)
+    def newSalida(numeroCasilla)
+      new(TipoCasilla::SALIDA, 0, numeroCasilla, nil)
     end
     
-     def self.newJuez(numeroCasilla)
-      self.new(TipoCasilla::JUEZ, 0, numeroCasilla, nil)
+    def newJuez(numeroCasilla)
+      new(TipoCasilla::JUEZ, 0, numeroCasilla, nil)
     end
     
-    def self.newParking(numeroCasilla)
-      self.new(TipoCasilla::PARKING, 0, numeroCasilla, nil)
+    def newParking(numeroCasilla)
+      new(TipoCasilla::PARKING, 0, numeroCasilla, nil)
     end
     
-    def self.newCarcel(numeroCasilla)
-      self.new(TipoCasilla::CARCEL, 0, numeroCasilla, nil)
+    def newCarcel(numeroCasilla)
+      new(TipoCasilla::CARCEL, 0, numeroCasilla, nil)
     end
     
     def to_s
-      texto = "Estas en la casilla: #{@numeroCasilla}\nCoste de la casilla: #{@coste}\nTipo de casilla: #{@tipo}\nTutlo: "
-      unless @titulo == 0
-        texto << "\n#{@titulo}"
+      t = "Casilla: #{@numero_casilla}\nCoste de la casilla: #{@coste}\nTipo de casilla: #{@tipo}\nTitulo: "
+      unless @titulo == nil
+        t+= "\n#{@titulo}\n\n"
       else
-        texto << "No tiene"
-        
-      texto
+        t+="No tiene\n\n"
       end
+      return t
     end
   end
 end
