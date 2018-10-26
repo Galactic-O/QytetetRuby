@@ -15,8 +15,7 @@ require_relative "qytetet"
 module ModeloQytetet
   class PruebaQytetet
     
-    @@juego = Qytetet.new
-    @tablero
+    @@juego = Qytetet.instance
     
     def PruebaQytetet.getMasQueCero()
       mazotemporal = Array.new
@@ -48,11 +47,30 @@ module ModeloQytetet
       return mazotemporal
     end
     
+    def PruebaQytetet.get_nombre_jugadores
+      puts "Inserta el numero de jugadores: "
+      numero = gets.to_i
+      
+      nombres = Array.new
+      for i in 1..numero do
+        puts "Inserta tu nombre, Jugador " + i.to_s + " :"
+        cadena = gets
+        nombres << cadena
+      end
+      puts "\n"
+      return nombres
+    end
+    
     def PruebaQytetet.main
-      @@juego.inicializarCartasSorpresa
-      @@juego.inicializarTablero
+      
+      @@juego.inicializar_juego(get_nombre_jugadores)
       
       puts "Esto es una prueba." << "\n" << "\n"
+      
+      for j in @@juego.jugadores
+        puts j.to_s
+      end
+      
       
       #PRUEBAS DE LA SESION 1 PRACTICA 1
       #puts "Carta con un valor mayor que cero: "
@@ -65,8 +83,8 @@ module ModeloQytetet
       #puts getSorpresa(TipoSorpresa::PAGARCOBRAR) << "\n"
       
       #PRUEBAS DE LA PRACTICA 1 SESION 2
-      puts "Casillas del tablero: "
-      puts @@juego.tablero
+      #puts "Casillas del tablero: "
+      #puts @@juego.tablero
     end
     
   end

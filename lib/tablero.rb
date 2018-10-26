@@ -18,8 +18,6 @@ module ModeloQytetet
       iniciarTablero()
     end
     
-    
-    
     def iniciarTablero()
       @casillas << Casilla.new(TipoCasilla::SALIDA, 0, 0, nil)
       titulo = TituloPropiedad.new("Calle Champinon", 600, 60, 10, 300, 400)
@@ -75,10 +73,16 @@ module ModeloQytetet
     public
     def to_s
       #puts  "Hola mundo"
-      return "Tablero: \n casillas= #{@casillas.join} \n carcel= #{@carcel}"
+      return "Tablero: \n--Casillas--\n#{@casillas.join} \n--Carcel--\n#{@carcel}"
     end
     
+    def obtener_casilla_final(casilla, desplazamiento)
+      raise NotImplementedError 
+    end
     
-    #private :iniciarTablero
+    def obtener_casilla_numero(numero_casilla)
+      raise NotImplementedError 
+    end
+    
   end
 end

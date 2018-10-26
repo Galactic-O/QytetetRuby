@@ -22,7 +22,7 @@ module ModeloQytetet
     #Por alguna razón la cual desconozco total y completamente, Ruby está atontado
     #y se piensa que estos constructores, preciosos y bien definidos aquí debajo,
     #no están definidos, y se ha puesto como objetivo joderme la vida haciendo que
-    #no funciones. Aún así los dejo aquí porque me los he currado.
+    #no funciones. Aún así los dejo aquí porque me los he curradcd Descd.
     def newCalle(numeroCasilla, titulo)
       new(TipoCasilla::CALLE, titulo.precioCompra, numeroCasilla, titulo)
     end
